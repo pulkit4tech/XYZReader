@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/article_byline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+        android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/primaryTextColor"
+        />
+
+    <TextView
+        android:id="@+id/article_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+        android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+        android:paddingBottom="@dimen/detail_body_bottom_margin"
+        android:layout_marginTop="@dimen/detail_inner_horiz_margin"
+        android:textColor="@color/secondaryTextColor"
+        android:textColorLink="@color/theme_accent"
+        android:textSize="@dimen/detail_body_text_size"
+        android:layout_below="@id/article_byline"
+        android:autoLink="web"
+        android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
