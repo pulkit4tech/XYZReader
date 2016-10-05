@@ -8,11 +8,6 @@ import com.squareup.picasso.Transformation;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/**
- * Created by Mobility Sports
- * User : Sneha Khadatare ( 587823 )
- * on 1/19/2016.
- */
 public final class PaletteTransformation implements Transformation {
   private static final PaletteTransformation INSTANCE = new PaletteTransformation();
     private static final Map<Bitmap, Palette> CACHE = new WeakHashMap<>();
