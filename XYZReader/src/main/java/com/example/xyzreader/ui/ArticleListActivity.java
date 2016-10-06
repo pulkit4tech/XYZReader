@@ -52,15 +52,13 @@ public class ArticleListActivity extends BaseActivity implements
     @Bind(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
+    @Bind(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout collapsingToolbarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
-
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle("XYZ Reader");
-        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
-        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
 
         ButterKnife.bind(this);
 
@@ -70,6 +68,9 @@ public class ArticleListActivity extends BaseActivity implements
             refresh();
         }
 
+        collapsingToolbarLayout.setTitle("XYZ Reader");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
