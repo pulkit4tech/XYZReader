@@ -57,6 +57,11 @@ public class ArticleListActivity extends BaseActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("XYZ Reader");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
+
         ButterKnife.bind(this);
 
         getLoaderManager().initLoader(0, null, this);
